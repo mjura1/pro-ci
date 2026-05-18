@@ -1,0 +1,37 @@
+name: main workflow (CI)
+
+on: 
+  push:
+    branches: [ main ]
+
+jobs: 
+  test-on-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.14
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.14"
+      - name: Run tests
+        run: python3 test.py 
+
+  test-on-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.14
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.14"
+      - name: Run tests
+        run: python test.py 
+        
+
+
