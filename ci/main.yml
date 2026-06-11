@@ -1,4 +1,5 @@
-name: main workflow (CI) - matic jurac
+name: main workflow (CI) (matic jurac)
+
 on: 
   push:
     branches: [ main ]
