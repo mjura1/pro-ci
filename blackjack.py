@@ -5,7 +5,7 @@ cards = {
     '7': 7, '8': 8, '9': 9, '10': 10,
     'J': 10, 'Q': 10, 'K': 10, 'A': 11
 }
-
+# test
 
 def deal_card():
     return random.choice(list(cards.keys()))
